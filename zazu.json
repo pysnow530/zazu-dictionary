@@ -1,0 +1,25 @@
+{
+  "name": "zazu-template",
+  "version": "1.0.0",
+  "description": "Zazu Template for starting your own plugin.",
+  "blocks": {
+    "input": [
+      {
+        "id": "SearchDictionary",
+        "type": "PrefixScript",
+        "prefix": "dict",
+        "space": true,
+        "args": "Required",
+        "script": "src/index.js",
+        "connections": ["Open"]
+      }
+    ],
+    "output": [
+      {
+        "id": "Open",
+        "type": "OpenInBrowser",
+        "url": "https://www.youdao.com/result?word={value}&lang=en"
+      }
+    ]
+  }
+}
